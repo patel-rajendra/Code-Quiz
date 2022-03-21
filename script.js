@@ -7,6 +7,7 @@ var next_btn = quiz_box.querySelector('.next_btn')
 var result_box = document.querySelector('.result_box');
 var submit = document.querySelector('#submit');
 var initials = document.querySelector("#initials");
+var count=60;
 
 // if start quiz button clicked
 start_btn.onclick = ()=>{
@@ -20,7 +21,7 @@ start_btn.onclick = ()=>{
 //countdown timer
 function timerCounter()
 {
-var count=6;
+
 var interval = setInterval(function(){
     // document.getElementById('timeSpan').innerHTML=count;
     // count--;
@@ -34,6 +35,7 @@ var interval = setInterval(function(){
         console.log(count);
         clearInterval(interval);
         document.getElementById('timeSpan').innerHTML='Done';
+        showResultBox();
         // alert('You time is done');
     }
 },1000);
@@ -53,6 +55,7 @@ next_btn.onclick = () => {
     }
     else{
         console.log("Questions completed");
+     //   clearInterval(interval);
         showResultBox();
     }
 }
@@ -73,6 +76,7 @@ function showQuestions(index){
    for (i = 0; i < option.length; i++){
        option[i].setAttribute("onclick","optionselected(this)");
    }
+   console.log(questions[index].length);
 }
 
 function optionselected(answer)
@@ -88,6 +92,8 @@ function optionselected(answer)
     }
     else{
         answer.classList.add("incorrect");
+        count -=3;
+
         console.log("Answer is wrong");
 
         // //if answer is incorrect then automatically selected the correct answer
@@ -111,6 +117,7 @@ function showResultBox(){
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
   document.getElementById('finalscore').innerHTML=userScore;
+  clearInterval(count);
 }
 
 submit.addEventListener("click", function(event){
@@ -118,8 +125,10 @@ event.preventDefault();
 var result ={
     initialsname : initials.value.trim()
 };
-localStorage.setItem(result);
+localStorage.setItem('user',JSON.stringify(result));
+window.location.reload();
 });
+
 
 // submit.addEventListener("click", addToHighscores);
 // function addToHighscores() {
