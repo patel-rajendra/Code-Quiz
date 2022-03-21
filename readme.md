@@ -17,7 +17,7 @@ This application is a timed coding quiz with multiple-choice questions.
 
 
 The following image demonstrates the application functionality:
-
+![Coding Quiz1](https://user-images.githubusercontent.com/99554262/159202284-55c3d77a-6bdb-410b-8385-392781107718.jpg)
 
 # References:
 https://patel-rajendra.github.io/Password-Generator/
