@@ -133,6 +133,23 @@ footer .next_btn{
      pointer-events: none;
  }
 
+ .text-info {
+    color:darksalmon;
+    text-align: center;
+}
+.bg-info {
+    background: lightsalmon;
+}
 
+.table-info {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2px solid;
+}
 
-
+.button-info{
+    padding: 5px;
+    margin: 15px;
+    padding: 10px;
+}

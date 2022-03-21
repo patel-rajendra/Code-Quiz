@@ -122,6 +122,8 @@ function showResultBox(){
   document.getElementById('finalscore').innerHTML=userScore;
   clearInterval(count);
   submit.addEventListener("click",Scores);
+  submit.setAttribute("class","button-info");
+  initials.setAttribute("class","button-info");
 }
 
 function Scores(event){
@@ -163,7 +165,7 @@ function Scores(event){
 function showHighScores(){
    
     title.innerHTML = "Highscores";
-    title.setAttribute("class","text-center text-info");
+    title.setAttribute("class","text-info");
     title.style.display = "block";
     
     // quizContent.style.display = "none";
@@ -228,9 +230,10 @@ function showHighScores(){
         // appends <table> into <body>
 
         // sets the border attribute of tbl to 2;
-        tbl.setAttribute("border", "2");
-        tbl.setAttribute("width","100%");
-        
+        // tbl.setAttribute("border", "2");
+        // tbl.setAttribute("width","50%");
+         tbl.setAttribute("class","table-info");
+
         highscoresDiv.appendChild(tbl);
 
         var btnDiv = document.createElement("div");
@@ -241,7 +244,7 @@ function showHighScores(){
 
     // Go Back button to go to start page
     var goback = document.createElement("button");
-    goback.setAttribute("class","btn btn-primary rounded-pill mb-2 mt-4 ml-2");
+    goback.setAttribute("class","button-info");
     goback.textContent = "Go Back";
     btnDiv.appendChild(goback);
     
@@ -252,7 +255,7 @@ function showHighScores(){
 
     // Clear Highscores button : clears localStorage
     var clearscores = document.createElement("button");
-    clearscores.setAttribute("class","btn btn-primary rounded-pill mb-2 mt-4 ml-2");
+    clearscores.setAttribute("class","button-info");
     clearscores.textContent = "Clear Highscores";
     btnDiv.appendChild(clearscores);
     
