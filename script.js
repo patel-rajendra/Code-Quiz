@@ -11,6 +11,7 @@ var initials = document.querySelector("#initials");
 var highscoresDiv = document.querySelector("#highscores");
 var navhighscorelink = document.querySelector("#viewHighscores");  
 var navlink = document.getElementById("viewHighscores");
+var header_timer = document.querySelector('.card-header');
 var count=60;
 var que_count = 0;
 var userScore = 0;
@@ -56,7 +57,8 @@ next_btn.onclick = () => {
     }
     else{
         console.log("Questions completed");
-     //   clearInterval(interval);
+        header_timer.style.display= "none";
+      //  clearInterval(interval);
         showResultBox();
     }
 }
@@ -274,4 +276,14 @@ navhighscorelink.addEventListener("click",function(){
     showHighScores(); //Calls function to show highscores
 
 });
+
+// submit.addEventListener("click", function(event){
+// event.preventDefault();
+// var result ={
+//     initialsname : initials.value.trim()
+// };
+// localStorage.setItem('user',JSON.stringify(result));
+// window.location.reload();
+// });
+
 
