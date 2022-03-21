@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Code Quiz</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='quiz.js'></script>
+</head>
+<body>
+    <!-- Header Part -->
+    
+    <div class="card-header">
+        <a
+            style="text-decoration: none;"
+            id="viewHighscores"
+            data-toggle="modal"
+            data-target="#staticBackdrop"
+            href="#"
+            >View Highscores</a>
+         <p id="timeP">
+          Available Time : <strong><span id="timeSpan"></span></strong>
+        </p>
+    </div>
+    <!-- Info Part -->
+    <div class="info_part">
+        <div class="info_title">Coding Quiz Challange</div>
+        <div class="info_text">Try to answer the following code-related questions within the
+            time limit.Keep in mind that incorrect answers will penalize your time by 3
+            seconds.</div>
+            <div class="start_btn"><button>Start Quiz</button></div>
+            <!-- <a href="#" class="btn btn-primary" id="startBtn">Start Quiz</a> -->
+     </div>
+
+    <!-- Quiz box -->
+    <div class="quiz_box">
+        <section>
+            <div class="que_text">
+                <!-- <span>What does HTML for?</span> -->
+            </div>
+            <div class="option_list">
+                <!-- <div class="option">
+                    <span>Hyper text Preprocessor</span>
+                </div>
+                <div class="option">
+                    <span>Hyper text Markup language</span>
+                </div>
+                <div class="option">
+                    <span>Hyper text</span>
+                </div>
+                <div class="option">
+                    <span>Hyper Preprocessor</span>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Quiz box footer -->
+        <footer>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+
+    <!-- Result box -->
+    <div class="result_box">
+        <div class="complete_text">
+            <h4>All done</h4>
+        </div>
+        <div class="score_text">
+            <h5>Your Final score : <span id="finalscore"></span></h5>
+        </div>
+        <!-- <div class="input_name">
+            Enter Initila : <input type="text"><button class="submit">Submit</button>
+        </div> -->
+        <form class="form-inline">
+            <input
+              class="form-control mr-2"
+              type="text"
+              id="initials"
+              placeholder="Enter your initials"
+            />
+            <button type="submit" class="btn btn-info" id="submit">
+              Submit
+            </button>
+          </form>
+    </div>
+
+    <!-- Added link to the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
